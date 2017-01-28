@@ -4,7 +4,7 @@ import numpy as np
 import competitionToolbox as ct
 
 def settings():
-    markets = ['A1'] # Stocks to download data for. 
+    markets = [] # Stocks to download data for. 
     # markets = [] Leave empty array to download all stocks for the exchange (~900 stocks)
     # To have a look at all possible stocks go here: 
     # 
@@ -46,6 +46,6 @@ def trading_strategy(lookback_data):
 if __name__ == '__main__':
     [markets, lookback] = settings()
     # For testing you can change dates if you want.
-    date_start = '01-01-2011'
-    date_end = '31-12-2014'
+    date_start = '01-01-2002'
+    date_end = '31-12-2013'
     ct.runSolution(markets, lookback, trading_strategy, date_start, date_end, ct.PROBLEM2_ID)#,verbose=True)

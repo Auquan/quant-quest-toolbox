@@ -11,6 +11,7 @@ dist
 test*.py
 quantquestToolbox.egg-info
 abcd
+auquan-solver.py
 
 # Windows image file caches
 Thumbs.db
