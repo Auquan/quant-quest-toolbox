@@ -201,11 +201,11 @@ def writejson(back_data,budget,baseline_data,base_index):
         k = 'Total Pnl'
 
     d = {'dates':back_data['DAILY_PNL'].index.format(),\
-         'daily_pnl':daily_return_percent.sum(axis=1).values.tolist(),\
+         #'daily_pnl':daily_return_percent.sum(axis=1).values.tolist(),\
          'total_pnl':total_return_percent.sum(axis=1).values.tolist(),\
-         'stocks':back_data['DAILY_PNL'].columns.tolist(),\
-         'stock_pnl':daily_return_percent.values.tolist(),\
-         'stock_position':back_data['POSITION'].values.tolist(),\
+         #'stocks':back_data['DAILY_PNL'].columns.tolist(),\
+         #'stock_pnl':daily_return_percent.values.tolist(),\
+         #'stock_position':back_data['POSITION'].values.tolist(),\
          'metrics':stats.keys(),\
          'metrics_values':stats.values(),\
          'score':stats[k]}
