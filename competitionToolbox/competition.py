@@ -39,6 +39,15 @@ def runSolution(markets, lookback, trading_strategy, date_start, date_end, probl
             logger.exception("Lookback is invalid")
             raise
 
+    try:
+        assert(lookback > 0)
+    except AssertionError:
+        logger.exception("Lookback should be more than 0")
+        raise
+
+    if lookback > 300:
+        lookback = 300
+
     #Load data for backtest
    
     (back_data, date_range) = at.load_data(exchange, markets, date_start, date_end, lookback, budget, logger)

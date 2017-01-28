@@ -11,7 +11,7 @@ def settings():
     # Based on data avalaible, some markets might be dropped. Only the non dropped markets will appear
     # in lookback_data for trading_strategy
 
-    lookback = 120               # Number of days you want historical data for
+    lookback = 120               # Number of days you want historical data for. Max can be 300.
 
     """ To make a decision for day t, your algorithm will have historical data
     from t-lookback to t-1 days"""
