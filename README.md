@@ -68,7 +68,7 @@ Your code’s final output should be pandas dataframe with security symbol as ro
 |AAPL | 1   |      55%
 |GOOG | -1 |     45%
 
-Here, if we have $1,000,000 in funds, we buy $550,000 worth of AAPl shares and sell $450,000 worth of GOOG shares.
+Here, if we have $1,000,000 in funds, we buy $550,000 worth of AAPL shares and sell $450,000 worth of GOOG shares.
 
 The weights don’t have to sum to 1. If they sum to < 1, the remaining funds are available as cash. If they sum to > 1, the weights are renormalized so that they sum to 1.
 
