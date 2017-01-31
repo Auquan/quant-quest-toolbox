@@ -192,19 +192,19 @@ def writejson(back_data,budget,baseline_data,base_index):
     total_return = back_data['TOTAL_PNL']/budget
     stats = at.metrics(daily_return, total_return, baseline_data,base_index)
     # multiply by 100 for readability purposes
-    daily_return_percent = daily_return*100
-    total_return_percent = total_return*100
 
     if base_index:
         k = 'Sharpe Ratio'
+        daily_return = daily_return*100
+        total_return = total_return*100
     else:
         k = 'Total Pnl'
 
     d = {'dates':back_data['DAILY_PNL'].index.format(),\
-         #'daily_pnl':daily_return_percent.sum(axis=1).values.tolist(),\
-         'total_pnl':total_return_percent.sum(axis=1).values.tolist(),\
+         #'daily_pnl':daily_return.sum(axis=1).values.tolist(),\
+         'total_pnl':total_return.sum(axis=1).values.tolist(),\
          #'stocks':back_data['DAILY_PNL'].columns.tolist(),\
-         #'stock_pnl':daily_return_percent.values.tolist(),\
+         #'stock_pnl':daily_return.values.tolist(),\
          #'stock_position':back_data['POSITION'].values.tolist(),\
          'metrics':stats.keys(),\
          'metrics_values':stats.values(),\
