@@ -63,7 +63,7 @@ def trading_strategy(lookback_data):
 
 if __name__ == '__main__':
     # For testing you can change dates if you want.
-    date_start = '01-01-2002' # Default date trading will start
+    date_start = '01-04-2002' # Default date trading will start
     date_end = '31-12-2013' # Date trading will end. When you submit your solution, we will run with more data.
     [markets, lookback] = settings()
     ct.runSolution(markets, lookback, trading_strategy, date_start, date_end, ct.PROBLEM3_ID)#,verbose=True)
